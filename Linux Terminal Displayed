@@ -1,0 +1,143 @@
+Scenario
+In this scenario, you need to obtain information contained in server log and user data files. You also need to find files with specific names.
+
+Here’s how you’ll do this: First, you’ll navigate to the logs directory and return the error messages in the server_logs.txt file. Next, you’ll navigate to the users directory and search for files that contain a specific string in their names. Finally, you’ll search for information contained in user files.
+
+With that in mind, you’re ready to practice what you've learned.
+
+Note: The lab starts with your user account, called analyst, already logged in to a Bash shell. This means you can start with the tasks as soon as you click the Start Lab button.
+Disclaimer: For optimal performance and compatibility, it is recommended to use either Google Chrome or Mozilla Firefox browsers while accessing the labs.
+Start your lab
+You'll need to start the lab before you can access the materials. To do this, click the green “Start Lab” button at the top of the screen.
+
+Lab Start button displayed.
+
+After you click the Start Lab button, you will see a shell, where you will be performing further steps in the lab. You should have a shell like this:
+
+Linux Terminal displayed. 
+
+When you have completed all the tasks, refer to the End your Lab section that follows the tasks for information on how to end your lab.
+
+Task 1. Search for error messages in a log file
+In this task, you must navigate to the /home/analyst/logs directory and report on the error messages in the server_logs.txt file. You’ll do this by using grep to search the file and output only the entries that are for errors.
+
+Navigate to the /home/analyst/logs directory.
+The command to complete this step:
+
+cd logs
+Copied!
+Use grep to filter the server_logs.txt file, and return all lines containing the text string error.
+Note: If you enter a command incorrectly and it fails to return to the command-line prompt, you can press CTRL+C to stop the process and force the shell to return to the command-line prompt.
+The command to complete this step:
+
+grep error server_logs.txt
+Copied!
+This grep command will filter server_logs.txt file, and return a list of the lines that match the text string error.
+
+Note: The first argument passed to grep is the string you're searching for, and the second argument is the name of the file you're searching through.
+
+How many error lines are there in the server_logs.txt file?
+Six
+Three
+Eight
+Two
+
+Answer: There are six entries in the server_logs.txt file that include the error string.
+
+Click Check my progress to verify that you have completed this task correctly.
+
+Search for error messages in a log file
+Task 2. Find files containing specific strings
+In this task, you must navigate to the /home/analyst/reports/users directory and use the correct Linux commands and arguments to search for user data files that contain a specific string in their names.
+
+Navigate to the /home/analyst/reports/users directory.
+The command to complete this step:
+
+cd /home/analyst/reports/users
+Copied!
+Using the pipe character (|), pipe the output of the ls command to the grep command to list only the files containing the string Q1 in their names.
+The command to complete this step:
+
+ls | grep Q1
+Copied!
+
+How many files in the /home/analyst/reports/users subdirectory contain “Q1” in their names?
+Five
+One
+Three
+Two
+
+Answer: There are three files in the reports/users directory that have Q1 in their names.
+
+Note: Piping sends the standard output of one command to the standard input of another command for further processing. In the example, the output of the grep command is piped to the ls command and the output displayed in the shell.
+List the files that contain the word access in their names.
+The command to complete this step:
+
+ls | grep access
+Copied!
+
+How many files in the /home/analyst/reports/users directory contain “access” in their names?
+Three
+Five
+Four
+None
+
+Answer: There are four files in the reports/users directory that have the text string access in their names.
+
+Click Check my progress to verify that you have completed this task correctly.
+
+Find files containing specific strings
+Task 3. Search more file contents
+In this task, you must search for information contained in user files and report on users that were added and deleted from the system.
+
+Display the files in the /home/analyst/reports/users directory.
+The command to complete this step:
+
+ls
+Copied!
+Search the Q2_deleted_users.txt file for the username jhill.
+The command to complete this step:
+
+grep jhill Q2_deleted_users.txt
+Copied!
+
+Did you find the username jhill in the Q2_deleted_users.txt file?
+No
+Yes
+
+Answer: Yes, the user jhill is listed in the Q2_deleted_users.txt file.
+
+Search the Q4_added_users.txt file to list the users who were added to the Human Resources department.
+The command to complete this step:
+
+grep "Human Resources" Q4_added_users.txt
+Copied!
+Note: In order for grep to interpret a string of two or more words correctly, you must enclose it in quotes ("Human Resources").
+
+How many users were added to the Human Resources department in quarter 4?
+Three
+One
+Two
+Five
+
+Answer: Two new users were added to the Human Resources department in quarter 4.
+
+Click Check my progress to verify that you have completed this task correctly.
+
+Search more file contents
+Conclusion
+Great work!
+
+You now have practical experience in using grep to:
+
+search for specific information contained in files, and
+find files containing specific strings that were piped into grep.
+You’re well on your way to using fundamental tools in Linux to filter the information you need.
+
+End your lab
+Before you end the lab, make sure you’re satisfied that you’ve completed all the tasks, and follow these steps:
+
+Click End Lab. A pop-up box will appear. Click Submit to confirm that you're done. Ending the lab will remove your access to the Bash shell. You won’t be able to access the work you've completed in it again.
+Another pop-up box will ask you to rate the lab and provide feedback comments. You can complete this if you choose to.
+Close the browser tab containing the lab to return to your course.
+Refresh the browser tab for the course to mark the lab as complete.
